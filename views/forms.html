@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+</head>
+<style type="text/css">
+div{
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	/*padding: 10px;*/
+}
+form{
+	background-color: tomato;
+	padding: 30px;
+}
+input[name="fname"],input[name="password"],form,input[name="email"]{
+	font-size: 20px;
+}
+
+fieldset{
+	margin-bottom: 30px;
+	/*padding: 40px;*/
+	background-color: green;
+}
+
+</style>
+<body>
+	<div>
+		<form autocomplete="off" novalidate target="_blank">
+			<fieldset>
+				<legend>Personal Information</legend>
+
+				Name: &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" name="fname" placeholder="First Name" size="20" required><br><br>
+
+				Password :&nbsp; <input type="password" name="password" placeholder="Password" autocomplete="on"><br><br>
+
+				Hiden: <input type="hidden" name="lname" placeholder="First Name" value="Hidden"><br><br>
+				Email: <input type="Email" name="email" placeholder="example@abc.com"><br><br>
+				Remember me <input type="checkbox" name="rem" >
+				<input type="submit" name="submit" value="Log in">
+
+			</fieldset>
+			<fieldset>
+				<legend>Address Information</legend>
+				Tel : <input type="tel" name="telephone"><br>
+				Country: <input list="countries" name="country" >
+
+				<datalist id="countries">
+					<option value="Cameroon" />
+					<option value="USA" />
+					<option value="Bangldesh"/>
+					<option value="Nigeria"/>
+				</datalist>
+				Country: 
+				<select name="county">
+					<optgroup label="Africa">
+						<option value="Cameroon">Cameroon</option>
+						<option value="Cameroon" >Gabon</option>
+						<option value="Cameroon" >Nigeria</option>
+					</optgroup>
+					<optgroup label="Assia">
+						<option value="Bangldesh" />
+						<option value="China" />
+						<option value="Japan" />
+					</optgroup>
+				</select>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
